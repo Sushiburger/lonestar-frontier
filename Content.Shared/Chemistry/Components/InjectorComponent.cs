@@ -1,8 +1,10 @@
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
@@ -120,6 +122,13 @@ public sealed partial class InjectorComponent : Component
     /// <inheritdoc cref=DoAfterArgs.MovementThreshold>
     [DataField]
     public float MovementThreshold = 0.1f;
+
+    /// <summary>
+    /// DeltaV - If set to true, this injector will only target the smallest reagent in the solution.
+    /// Incompatible with ReagentWhitelist.
+    /// </summary>
+    [DataField]
+    public bool TargetSmallest;
 
     #endregion
 }

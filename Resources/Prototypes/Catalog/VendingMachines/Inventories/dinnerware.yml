@@ -28,6 +28,7 @@
     DrinkMugRainbow: 2
     DrinkMugRed: 2
     ServiceSelectiveDropper: 2 # Frontier
+    Skimmer: 2 # DeltaV - Adds skimmer
   contrabandInventory:
     CandyBowl: 1
     BarSpoon: 2
