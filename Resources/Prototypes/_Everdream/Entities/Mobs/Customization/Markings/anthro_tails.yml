@@ -1,0 +1,27 @@
+# Poodle Tail - KC
+
+- type: marking
+  id: TailPoodle
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Felinid, Oni, Kitsune]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
+  waggingId: TailPoodleWag
+  sprites:
+  - sprite: _Everdream/Mobs/Customization/poodle.rsi
+    state: poodle_tail_primary
+  - sprite: _Everdream/Mobs/Customization/poodle.rsi
+    state: poodle_tail_secondary
+
+- type: marking
+  id: TailPoodleWag
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Felinid, Oni, Kitsune]
+  kindAllowance: [BasicHumanlike, BasicFurry, BasicRobot, VoxLike] # Coyote: Allow all markings
+  staticId: TailPoodle
+  hidden: true
+  sprites:
+  - sprite: _Everdream/Mobs/Customization/poodle.rsi
+    state: poodle_waggingtail_primary
+  - sprite: _Everdream/Mobs/Customization/poodle.rsi
+    state: poodle_waggingtail_secondary
