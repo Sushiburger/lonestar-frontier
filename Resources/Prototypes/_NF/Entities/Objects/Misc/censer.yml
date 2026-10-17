@@ -1,60 +1,3 @@
-# - type: entity
-#   name: censer
-#   parent: BaseItem
-#   id: Censer
-#   description: Usually you put incense in there.
-#   components:
-#   - type: Smokable
-#     exposeTemperature: 1173.15
-#   - type: Tag
-#     tags:
-#     - ObjectOfSpiritualSignificance
-#     - Censer
-#   - type: StaticPrice
-#     price: 5
-#   - type: InjectableSolution
-#     solution: smokable
-#   - type: ContainerContainer
-#     containers:
-#       bowl_slot: !type:ContainerSlot
-#   - type: ItemSlots
-#   - type: SmokingPipe
-#     bowl_slot:
-#       name: Bowl
-#       whitelist:
-#         tags:
-#           - Smokable
-#       insertSound:
-#         path: /Audio/Weapons/Guns/Empty/empty.ogg
-#       ejectSound:
-#         path: /Audio/Weapons/Guns/Empty/empty.ogg
-#   - type: SolutionContainerManager
-#     solutions:
-#       smokable:
-#         maxVol: 20
-#   - type: Sprite
-#     sprite: _NF/Objects/Misc/censer.rsi
-#     state: unlit-icon
-#   - type: Clothing
-#     sprite: Objects/Consumable/Smokeables/Pipes/pipe.rsi
-#     slots: [ belt ]
-#     equippedPrefix: unlit
-#   - type: Item
-#     size: Small
-#     sprite: _NF/Objects/Misc/censer.rsi
-#   - type: Appearance
-#   - type: BurnStateVisuals
-#     unlitIcon: unlit-icon
-#   - type: MeleeWeapon
-#     wideAnimationRotation: 0
-#     attackRate: 1
-#     damage:
-#       types:
-#         Blunt: 3
-#         Heat: 3
-#  - type: IgniteOnMeleeHit
-#    fireStacks: 1
-
 # LoneStar - Censer rework by KC. Based off the arabianlamp entity.
 - type: entity
   name: censer
@@ -176,10 +119,28 @@
     enabled: false
     netsync: false
     radius: 5
-    color: orange
+    color: "#e39c40"
   - type: ItemTogglePointLight
   - type: StaticPrice
     price: 1500
+  # - type: Bible
+  #   damage:
+  #     groups:
+  #       Brute: -15
+  #       Burn: -15
+  #   damageOnFail:
+  #     groups:
+  #       Brute: 15
+  #       Airloss: 15
+  #   damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+  #     groups:
+  #       Burn: 10
+  # - type: UseDelay
+  #   delay: 10.0
+  - type: Censer
+    damageOnUntrainedUse:
+      groups:
+        Burn: 10
   - type: Prayable
     bibleUserOnly: true
     sentMessage: prayer-popup-notify-pray-sent
@@ -190,3 +151,5 @@
     tags:
      - ObjectOfSpiritualSignificance
      - Censer
+  # - type: IgniteOnMeleeHit
+  #   fireStacks: 1
