@@ -64,17 +64,16 @@
   components:
   - type: Appearance
   - type: Item
-    size: Normal
-    heldPrefix: unlit
+    size: Small
     sprite: _NF/Objects/Misc/censer.rsi
-    state: unlit-icon
+    state: icon
     inhandVisuals:
       left:
       - state: inhand-left
       right:
       - state: inhand-right
   - type: MeleeWeapon
-    wideAnimationRotation: 180
+    wideAnimationRotation: 0
     damage:
       types:
         Blunt: 6
@@ -98,21 +97,26 @@
   - type: ItemToggle
     predictable: false
     soundActivate:
-      collection: lighterOnSounds
-    soundDeactivate:
-      path: /Audio/Items/candle_blowing.ogg
+      path: /Audio/Effects/cig_light.ogg
       params:
-        variation: 0.05
+        variation: 0.15
+        volume: 20
+    soundDeactivate:
+      path: /Audio/Effects/cig_snuff.ogg
+      params:
+        variation: 0.15
         volume: 10
   - type: ItemToggleHot
   - type: Sprite
     sprite: _NF/Objects/Misc/censer.rsi
+    state: icon
     inhandVisuals:
       left:
-      - state: lit-inhand-left
+      - state: inhand-left
       right:
-      - state: lit-inhand-right
-    layers:  
+      - state: inhand-right
+    layers:
+    - state: icon
     - state: flame
       visible: false
       shader: unshaded
@@ -141,13 +145,11 @@
       Welder:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 25
-        maxVol: 25
+          Quantity: 1
+        maxVol: 1
   - type: SolutionTransfer
     transferAmount: 5
     canChangeTransferAmount: false
-  - type: Spillable
-    solution: Welder
   - type: DrawableSolution
     solution: Welder
   - type: RefillableSolution
@@ -167,8 +169,8 @@
     sound:
       path: /Audio/Items/welder_drop.ogg
   - type: Welder
-    fuelConsumption: 0.05
-    fuelLitCost: 0.05
+    fuelConsumption: 0
+    fuelLitCost: 0
     tankSafe: true
   - type: PointLight
     enabled: false
@@ -179,6 +181,7 @@
   - type: StaticPrice
     price: 1500
   - type: Prayable
+    bibleUserOnly: true
     sentMessage: prayer-popup-notify-pray-sent
     notificationPrefix: prayer-chat-notify-censer
     verb: prayer-verbs-pray
