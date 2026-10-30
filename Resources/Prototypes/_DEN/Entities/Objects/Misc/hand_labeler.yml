@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [HandLabeler, BaseAntiPsionicWeapon, BaseMantisContraband] # Contraband so the mystagogue doesn't steal it
+  parent: [HandLabeler] # Contraband so the mystagogue doesn't steal it
   id: HandLabelerMantis
   name: sigillator
   suffix: Hand Labeler
