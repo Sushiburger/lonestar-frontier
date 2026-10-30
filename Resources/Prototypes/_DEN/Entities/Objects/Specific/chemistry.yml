@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [ BaseSyringe, BasePsionic ]
+  parent: [ BaseSyringe ]
   id: SyringeMantis
   name: electrum syringe
   suffix: Somber
@@ -54,7 +54,7 @@
     - MantisBoxChemicalsStorable
 
 - type: entity
-  parent: [ BaseDecorativeFixtureNoRot, PillCanister, BasePsionic ]
+  parent: [ PillCanister ]
   id: PillCanisterMantis
   name: electrum pill canister
   suffix: Somber
