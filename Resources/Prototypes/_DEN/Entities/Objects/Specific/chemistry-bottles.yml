@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [ BaseDecorativeFixtureNoRot, BaseChemistryEmptyBottle, BasePsionic ]
+  parent: [ BaseChemistryEmptyBottle ]
   id: ChemistryEmptyBottleMantis
   name: electrum bottle
   suffix: Somber
@@ -31,10 +31,6 @@
     damage:
       types:
         Blunt: 0 # Metal shell
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 1 # Doink
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic # Metal shell
