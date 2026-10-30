@@ -267,8 +267,8 @@
     - id: ChemistryEmptyBottleMantis
     - id: PillCanisterMnemolithMantis # The bottles are labeled and color coded for safety
     - id: PillCanisterSpaceDrugsMantis
-    - id: PillCanisterCryptobiolinMantis
-    - id: PillCanisterMindbreakerToxinMantis # They don't have mindbreaker bullets anymore, so they get this instead
+    # - id: PillCanisterCryptobiolinMantis
+    # - id: PillCanisterMindbreakerToxinMantis # They don't have mindbreaker bullets anymore, so they get this instead
   - type: Tag
     tags:
     - MantisBeltStorable
