@@ -131,3 +131,99 @@
       - Pen
       - MantisBeltStorable
       - MantisBoxFolderStorable # Only the mantis pen, stamp, and papers should have this
+
+- type: entity
+  parent: [Paper, ClothingMaskBase]
+  id: PaperMantis
+  name: ledgerstone # It's a spooky pun - it comes from the mantis ledger and is made with stone powder, but a ledgerstone is a gravestone
+  description: "A sharp, durable page taken from the mantis ledger. Mnemolith powder sparkles within its surface. You feel watched."
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/bureaucracy.rsi
+      layers:
+      - state: paper_mantis
+      - state: paper_mantis_words
+        map: ["enum.PaperVisualLayers.Writing"]
+        visible: false
+      - state: paper_stamp-generic
+        map: ["enum.PaperVisualLayers.Stamp"]
+        visible: false
+    - type: Item
+      sprite: Objects/Misc/bureaucracy.rsi
+      heldPrefix: paper_mantis
+    - type: Clothing # I tried putting these sprites in their own folder but the Clothing component doesn't actually read the sprite line below... Forgive me...
+      sprite: Objects/Misc/bureaucracy.rsi # And if the papers were in their own folder, they either couldn't be stamped, or they'd have to replicate most of the folder...
+      quickEquip: false
+      slots: [ mask ] # You can wear it over your face like a paper talisman and the eye on it will pulse every few seconds, but this isn't noted anywhere
+      clothingVisuals:
+        mask:
+        - state: paper_mantis-equipped-MASK
+        - state: paper_mantis-equipped-glow
+          shader: unshaded
+    - type: HideLayerClothing
+      slots:
+      - Snout
+    - type: BreathMask
+    - type: TypingIndicatorClothing # It gives you a new typing indicator if you wear it
+      proto: mantis
+    - type: PaperLabelType # So it can label containers with a unique sprite
+      paperType: MantisPaper
+    - type: Food
+      transferAmount: 15
+    - type: FlavorProfile
+      flavors:
+        - mantispaper
+        - mnemolith
+    - type: SolutionContainerManager
+      solutions:
+        food: # The mnemolith powder in the paper itself (if it's eaten)
+          maxVol: 15
+          reagents:
+          - ReagentId: MnemolithReagent
+            Quantity: 15
+        injector: # The mnemolith powder in the edges (if it's thrown into you)
+          maxVol: 300
+          reagents: # Notably, grinding it only produces the "food" reagent volume above, so this is just for thrown hits and not otherwise accessible
+          - ReagentId: MnemolithReagent # And it lacks the RefillableSolution component, so you can't empty it and then fill it with poison or something
+            Quantity: 300
+    - type: SolutionInjectOnEmbed # You get a brief extrasensory experience when it gives you a paper cut
+      transferAmount: 3
+      solution: injector
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 30 # Burns three times longer than a normal paper just to be spooky
+        behaviors:
+        - !type:SpawnEntitiesBehavior
+          spawn:
+              MnemolithPowder: # Not just ash
+                min: 1
+                max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: Flammable
+      fireSpread: false # Psionic fire doesn't work like that
+    - type: FireVisuals
+      sprite: _DEN/Effects/fire.rsi
+      normalState: mantispagefire # Has its own fire animation that shows the paper's eye
+      lightColor: "#4dc4ff" # Psionic fire color
+    - type: EmbeddableProjectile
+      sound: /Audio/Weapons/pierce.ogg # Just a dull thunk since it does almost no damage
+      removalTime: 2
+    - type: PaperVisuals
+      backgroundImagePath: "/Textures/_DEN/Interface/Paper/mantispaper.png"
+      contentMargin: 60.0, 37.0, 50.0, 63.0
+      fontAccentColor: "#767d82"
+      maxWritableArea: 400.0, 400.0
+    - type: Tag
+      tags:
+        - Document
+        - Trash
+        - Paper
+        - MantisBeltStorable
+        - MantisBoxFolderStorable # Only the mantis pen, stamp, and papers should have this
+        - IPCMaskWearable # Who designed this
+        - WhitelistChameleon
