@@ -52,6 +52,20 @@
     {
       "name": "pen_mantis-inhand-right",
 	  "directions": 4
+    },
+    {
+      "name": "stamp-mantis"
+    },
+    {
+      "name": "stamp-mantis-unshaded"
+    },
+    {
+        "name": "stamp-mantis-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "stamp-mantis-inhand-right",
+        "directions": 4
     }
   ]
 }

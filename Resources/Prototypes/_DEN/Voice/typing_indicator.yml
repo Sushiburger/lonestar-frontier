@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Jakumba
 # SPDX-FileCopyrightText: 2025 juniwoofs
 # SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 Shaman
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
@@ -9,3 +10,16 @@
   spritePath: /Textures/_DEN/Effects/speech.rsi
   typingState: ovinia0
   idleState: ovinia1
+
+- type: typingIndicator # From wearing PaperMantis as a mask, or for psionic things visibly made of mnemolith
+  id: mantis
+  spritePath: /Textures/_DEN/Effects/speech.rsi
+  typingState: mantis0
+  idleState: mantis3
+
+- type: typingIndicator # For psionic entities in general
+  id: psionic
+  spritePath: /Textures/_DEN/Effects/speech.rsi
+  typingState: psionic0
+  idleState: psionic3
+  offset: -.36, 0.36
