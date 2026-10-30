@@ -36,12 +36,6 @@
       - !type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: EmitSoundOnPickup
-    sound: /Audio/Items/Handling/drinkglass_pickup.ogg
-  - type: EmitSoundOnDrop
-    sound: /Audio/Items/Handling/drinkglass_drop.ogg
-  - type: EmitSoundOnLand
-    sound: /Audio/Items/Handling/drinkglass_drop.ogg
   - type: PhysicalComposition
     materialComposition:
       Gold: 10
