@@ -248,7 +248,7 @@
         variation: 0.05
         maxDistance: 10 # Longer range to be spooky
   - type: Sprite
-    sprite: Nyanotrasen/Objects/Misc/bureaucracy.rsi
+    sprite: _Den/Objects/Misc/bureaucracy.rsi
     layers:
     - state: stamp-mantis
     - state: stamp-mantis-unshaded
