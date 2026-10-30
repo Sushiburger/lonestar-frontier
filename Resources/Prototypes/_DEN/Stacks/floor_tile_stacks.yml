@@ -32,7 +32,6 @@
   icon: { sprite: _DEN/Objects/Tiles/tile.rsi, state: carpet-pink-narrow }
   spawn: FloorCarpetItemPinkNarrow
   maxCount: 30
-  itemSize: 5
 
 - type: stack
   id: FloorCarpetCyanNarrow
@@ -40,4 +39,3 @@
   icon: { sprite: _DEN/Objects/Tiles/tile.rsi, state: carpet-cyan-narrow }
   spawn: FloorCarpetItemCyanNarrow
   maxCount: 30
-  itemSize: 5
