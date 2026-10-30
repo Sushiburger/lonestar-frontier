@@ -216,7 +216,7 @@
     sprite: _DEN/Structures/Storage/somberfridgeright.rsi
 
 - type: entity
-  parent: [ BaseWallCloset, BasePsionic ]
+  parent: [ BaseWallCloset ]
   id: SomberWallCloset
   name: somber wall cabinet
   description: "An expensive wall cabinet made of gloomy, patterned wood. Unfortunately, the shelves are unstable, and it's likely to dump your things in the floor..."
