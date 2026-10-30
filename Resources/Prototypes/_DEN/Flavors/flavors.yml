@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2025 Shaman
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: flavor
+  id: mantispaper
+  flavorType: Complex
+  description: flavor-complex-mantispaper
+
+- type: flavor
+  id: mnemolith
+  flavorType: Complex
+  description: flavor-complex-mnemolith

@@ -399,7 +399,7 @@
         - CableCoil
         - WeldingTool
         - BodyBag
-        - Rollerbed
+        - RollerBed
         - Syringe
       components:
         - BreathMask
