@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [ BaseDecorativeFixtureNoRot, Candle ] # BasePsionic doesn't exist on LoneStar
+  parent: [ Candle ] # BasePsionic doesn't exist on LoneStar, nor does DecorativeFixture
   id: CandleSomberMantis
   name: mnemolith candle
   suffix: Never Burns Out, Light After Mapping
