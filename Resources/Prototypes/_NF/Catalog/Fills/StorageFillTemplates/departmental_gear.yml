@@ -33,6 +33,7 @@
     - id: ClothingEyesGlassesChemical
     - id: PlasmaChemistryVial
     - id: HandLabeler
+    - id: Skimmer # Delta V - add skimmer
 
 - type: entityTable
   id: NFStorageFillGearParamedic
