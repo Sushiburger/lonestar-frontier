@@ -10,7 +10,7 @@
 # Mantis Clothes Port from the Den
 
 - type: entity
-   parent: [BoxFolderBase]
+  parent: [BoxFolderBase]
   id: BoxFolderMantis
   name: mantis ledger
   description: "A foreboding folder designed to document the station's psions. Fireproof, immune to scrying, and carrying a special pen."
