@@ -66,3 +66,9 @@
 - type: Tag
   id: MantisSickle
 # Mantis tags end, god almighty
+
+- type: Tag
+  id: RollerBed
+
+- type: Tag
+  id: WeldingTool
