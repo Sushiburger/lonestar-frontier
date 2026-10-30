@@ -66,8 +66,8 @@
     contents:
     - id: PillMindbreakerToxin
       amount: 5
-  - type: GuideHelp
-    guides: [ Mindbreaking ]
+  # - type: GuideHelp
+  #   guides: [ Mindbreaking ]
 
 - type: entity # Not obtainable by players, unless we want to prevent them from making heartbreaker out of their roundstart mindbreaker in MantisCaseChemicals
   parent: [PillCanisterMantis]

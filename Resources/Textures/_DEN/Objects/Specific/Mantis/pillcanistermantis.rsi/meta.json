@@ -8,6 +8,12 @@
   },
   "states": [
     {
+      "name": "base"
+    },
+    {
+      "name": "closed"
+    },
+    {
       "name": "pill_canister"
     },
     {
