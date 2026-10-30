@@ -6,7 +6,7 @@
 
 # Somber lockers start
 - type: entity
-  parent: [ ClosetBase, BasePsionic ]
+  parent: [ ClosetBase ]
   id: SomberCloset
   name: somber cabinet
   description: "An expensive cabinet made of gloomy, patterned wood."
