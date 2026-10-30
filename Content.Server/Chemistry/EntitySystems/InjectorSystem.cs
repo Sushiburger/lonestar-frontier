@@ -1,6 +1,5 @@
 using Content.Server.Body.Systems;
 using Content.Shared._DV.Chemistry.Components; // DeltaV
-using System.Linq; // DeltaV
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
@@ -353,7 +352,7 @@ public sealed class InjectorSystem : SharedInjectorSystem
         }
         // End DeltaV Additions - skimmer functionality
 
-        var applicableTargetSolution = targetSolution.Comp.Solution;
+        // var applicableTargetSolution = targetSolution.Comp.Solution;
         // Frontier: reagent whitelist fixes
         // // If a whitelist exists, remove all non-whitelisted reagents from the target solution temporarily
         // var temporarilyRemovedSolution = new Solution();
@@ -391,11 +390,11 @@ public sealed class InjectorSystem : SharedInjectorSystem
         }
 
         // Frontier: reagent whitelist fixes
-        // Move units from attackSolution to targetSolution
-        var removedSolution = SolutionContainers.Draw(target.Owner, targetSolution, realTransferAmount);
+        // // Move units from attackSolution to targetSolution
+        // var removedSolution = SolutionContainers.Draw(target.Owner, targetSolution, realTransferAmount);
 
-        // Add back non-whitelisted reagents to the target solution
-        SolutionContainers.TryAddSolution(targetSolution, temporarilyRemovedSolution); // DeltaV - fix bug with visualization for skimmers
+        // // Add back non-whitelisted reagents to the target solution
+        // SolutionContainers.TryAddSolution(targetSolution, temporarilyRemovedSolution);
 
         Solution removedSolution;
         if (injector.Comp.ReagentWhitelist is { } reagentWhitelist)

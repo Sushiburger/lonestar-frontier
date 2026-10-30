@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ BaseDecorativeFixture, BarSpoon ]
+  parent: [ BarSpoon ]
   id: BarSpoonSomber
   name: electrum bar spoon
   suffix: Somber Barware
@@ -22,7 +22,7 @@
       Silver: 10
 
 - type: entity
-  parent: [ BaseDecorativeFixture, Skimmer ] # It's arguably a chemistry item, but it only comes from the somber bar and kitchen vendors, so whatever
+  parent: [ Skimmer ] # It's arguably a chemistry item, but it only comes from the somber bar and kitchen vendors, so whatever
   id: SkimmerSomber
   name: electrum skimmer
   suffix: Somber Barware
@@ -75,7 +75,7 @@
       visible: false
 
 - type: entity
-  parent: [ BaseDecorativeFixture, Spoon ]
+  parent: [ Spoon ]
   id: SpoonSomber
   name: electrum spoon
   suffix: Somber Dinnerware
@@ -98,7 +98,7 @@
       Silver: 10
 
 - type: entity
-  parent: [ BaseDecorativeFixture, Fork ]
+  parent: [ Fork ]
   id: ForkSomber
   name: electrum fork
   suffix: Somber Dinnerware
@@ -121,7 +121,7 @@
       Silver: 10
 
 - type: entity
-  parent: [ BaseDecorativeFixture, BaseKnife ]
+  parent: [ BaseKnife ]
   id: KnifeSomber # Barely a weapon, so it goes here
   name: electrum knife
   suffix: Somber Dinnerware
@@ -144,7 +144,6 @@
   - type: EmbeddableProjectile
     removalTime: 0.5
     autoRemoveDuration: 10
-  - type: EmbedPassiveDamage
   - type: ThrowingAngle
     angle: -160
   - type: LandAtCursor
