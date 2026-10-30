@@ -102,7 +102,7 @@
     sprite: _DEN/Objects/Specific/Chemistry/pills.rsi
     state: soulbreakerpill
   - type: Pill
-    state: soulbreakerpill
+    pillType: soulbreakerpill
   - type: Item
     size: Tiny
     sprite: _DEN/Objects/Specific/Chemistry/pills.rsi
@@ -154,7 +154,7 @@
     sprite: _DEN/Objects/Specific/Chemistry/pills.rsi
     heldPrefix: mnemolith
   - type: Pill
-    state: mnemolithpill
+    pillType: mnemolithpill
   - type: SolutionContainerManager
     solutions:
       food:
