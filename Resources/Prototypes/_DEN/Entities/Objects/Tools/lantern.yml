@@ -4,12 +4,12 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [BaseItem, BaseAntiPsionicWeapon, BaseMantisContraband] # If I parented it to Lantern, it would have a battery slot...
+  parent: [BaseItem] # If I parented it to Lantern, it would have a battery slot...
   id: LanternMantis
   name: mantis lantern
   description: "An ornate lantern housing an eidolite pyramid that draws power from the noosphere. Stare too long and the gleam resolves into shapes you almost recognize, then promptly forget. For all its theatrics, the handle still hangs comfortably on your back."
   components:
-    - type: ItemToggleOnTrigger # Makes it possibly useful for decoration
+    # - type: ItemToggleOnTrigger # Makes it possibly useful for decoration
     - type: TriggerOnSignal
     - type: DeviceLinkSink
       ports:
@@ -27,7 +27,7 @@
         map: ["light"]
     - type: Item
       sprite: _DEN/Objects/Specific/Mantis/lanternmantis.rsi
-    - type: EtherealLight # Dims around ethereal entities
+    # - type: EtherealLight # Dims around ethereal entities
     - type: PointLight
       enabled: false
       energy: 3
@@ -97,12 +97,12 @@
       - MantisBeltStorable
 
 - type: entity
-  parent: [ BaseDecorativeFixtureNoRot, BaseItem ]
+  parent: [ BaseItem ]
   id: LanternSomber
   name: somber lamp
   description: "A palm-sized electrum sphere studded with shards of eidolite, each humming with faint noospheric charge. Its glow lingers in your vision, imprinting shapes you can't quite name."
   components:
-    - type: ItemToggleOnTrigger
+    # - type: ItemToggleOnTrigger
     - type: TriggerOnSignal
     - type: DeviceLinkSink
       ports:
@@ -120,7 +120,7 @@
         map: ["light"]
     - type: Item
       sprite: _DEN/Objects/Tools/somberlamp.rsi
-    - type: EtherealLight # Dims around ethereal entities
+    # - type: EtherealLight # Dims around ethereal entities
     - type: PointLight
       enabled: false
       energy: 2.4
