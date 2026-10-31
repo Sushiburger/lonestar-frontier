@@ -158,7 +158,7 @@
 - type: entity
   parent: BaseStainedGlass
   id: NarsieStainedGlassSmall1
-  name: nar'sic stained glass window
+  name: nar'sien stained glass window
   suffix: blood cult
   components:
   - type: Sprite
@@ -170,7 +170,7 @@
 - type: entity
   parent: BaseStainedGlass
   id: NarsieStainedGlassSmall2
-  name: nar'sic stained glass window
+  name: nar'sien stained glass window
   suffix: blood cult
   components:
   - type: Sprite
@@ -182,7 +182,7 @@
 - type: entity
   parent: BaseStainedGlass
   id: NarsieStainedGlassSmall3
-  name: nar'sic stained glass window
+  name: nar'sien stained glass window
   suffix: blood cult
   components:
   - type: Sprite
@@ -194,7 +194,7 @@
 - type: entity
   parent: BaseStainedGlass
   id: NarsieStainedGlassLarge
-  name: nar'sic stained glass window
+  name: nar'sien stained glass window
   suffix: blood cult
   components:
   - type: Sprite
